@@ -15,6 +15,10 @@ Plugin Options
 2. start (Default: 1) The starting line number
 3. digits (Default: 4) The number of digits the line numbers should max out at, this is used for lead space calculating and does _not_ include the colon.
 
+License
+-------
+This plugin has been realsed under the GNU General Public License v3.0.
+
 Version History
 ---------------
 + 1.0.0 • May 27th 2012 - _Initial release._
