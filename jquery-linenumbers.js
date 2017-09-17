@@ -6,12 +6,15 @@
 			start: 1,
 			digits: 4.
 		},in_opts);
+        // Remove existing div and the textarea from previous run
+        $("[data-name='linenumbers']").remove();
+        // Function run
 		return this.each(function(){
 			// Get some numbers sorted out for the CSS changes
 			var new_textarea_width = (parseInt($(this).css('width'))-parseInt(opt.col_width))+'px';
 			// Create the div and the new textarea and style it
-			$(this).before('<div style="width:'+$(this).css('width')+';"><textarea style="width:'+new_textarea_width+';float:left;margin-right:'+'-'+new_textarea_width+';font-family:monospace;white-space:pre;overflow:hidden;" disabled="disabled"></textarea>');
-			$(this).after('<div style="clear:both;"></div></div>');
+			$(this).before('<div data-name="linenumbers" style="width:'+$(this).css('width')+';"><textarea data-name="linenumbers" style="width:'+new_textarea_width+';float:left;margin-right:'+'-'+new_textarea_width+';font-family:monospace;white-space:pre;overflow:hidden;" disabled="disabled"></textarea>');
+			$(this).after('<div data-name="linenumbers" style="clear:both;"></div></div>');
 			// Edit the existing textarea's styles
 			$(this).css({'font-family':'monospace','width':new_textarea_width,'float':'right'});
 			// Define a simple variable for the line-numbers box
@@ -44,7 +47,7 @@
 				$(lnbox).val(line_number_output);
 				// Change scroll position as they type, makes sure they stay in sync
 			    $(lnbox).scrollTop($(this).scrollTop());
-			})
+			});
 			// Lock scrolling together, for mouse-wheel scrolling 
 			$(this).scroll(function(){
 			    $(lnbox).scrollTop($(this).scrollTop());
@@ -54,3 +57,4 @@
 		});
 	};
 })(jQuery);
+$('textarea').linenumbers();

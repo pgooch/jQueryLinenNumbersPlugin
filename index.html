@@ -20,19 +20,19 @@ body{
 }
 h1{
 	font: bold 2em/1em "Optima", serif;
-	margin:0px;
-	padding:0px;
+	margin:0;
+	padding:0;
 	text-align: center;
 	padding-bottom: 25px;
-	text-shadow: 0px -1px 1px white, 0px 1px 0px #999;
+	text-shadow: 0 -1px 1px white, 0 1px 0 #999;
 }
 p{
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	margin: 0px;
-	text-shadow: 0px -1px 1px white, 0px 1px 0px #999;
+	margin: 0;
+	text-shadow: 0 -1px 1px white, 0 1px 0 #999;
 }
 b{
 	font-weight: 500;
@@ -67,16 +67,16 @@ h2 a:hover{
 	text-decoration: underline;
 }
 h2{
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	padding-top: 30px;
 }
 h3{
 	font-size: .6em;
 	text-align: center;
 	font-weight: 200;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 </style>
 </head>
@@ -97,23 +97,22 @@ Nothing special about this, not even any fancy CSS.
 But havent you ever wanted to have a textarea with fancy line numbers?
 Problem? Solved.</textarea>
 	<p>By simply doing this...</p>
-	<code>$('document').ready(function(){
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#line_numbers').linenumbers({col_width:'75px'});
-})</code>
+	<code>&lt;script src="jquery-linenumbers.min.js">&lt;/script></code>
 	<p>neat huh. Line numbers make it easy to track the size of a text area, and look right at home if your dealing with code. It wraps lines intelligently, just because the textarea wraps doesn't mean it's actually a new line. How wonderful it recognizes that.</p>
-	<p>Setup is a snap, at it's simplest form all you have to do is call the linenumbers function like this...</p>
-	<code>.linenumbers()</code>
 	<p>If you want to get fancy there are some additional options you can pass...</p>
 	<ol>
 		<li><b>col_width</b>: <em>Default: 25px</em> The width of the numbers column. Default should be big enough for 4 columns on a text area with no styles applied. This will need to be modified for the number of digits you choose, and the textarea styles.</li>
 		<li><b>start</b>: <em>Default: 1</em> The number at which line numbering starts.</li>
 		<li><b>digits</b>: <em>Default 4</em> The number of digits the line numbers should max out at. This si used for calculating leading space, and does not include the colon.</li>
 	</ol>
+    <p>For example:</p>
+	<code>$('textarea').linenumbers({'20px', 1, 1});</code>
 	<p>You'll need to give your text area a set width, or the two line numbers won't line up right with the text, this has been tested as a px value, but percents should be ok in any format as long as the col_width is the same. Other than that it should work just fine. Internet Explorer has not been fully tested (due to the lack of a machine that can run it) but should work.</p>
-	<h2><a href="https://github.com/pgooch/jQueryLinenNumbersPlugin/zipball/master" target="_blank">Download</a></h2>
-	<h3>version 1.0.0 &mdash; May 27, 2012 &mdash; 4.80kb</h3>
+	<h2><a href="https://github.com/drakonoved/line-numbers/archive/master.zip" target="_blank">Download</a></h2>
+	<h3>version 1.0.2 &mdash; Sep 17, 2017 &mdash; 4.80kb</h3>
 	<p>Version History</p>
 	<ul>
+        <li><b>1.0.2</b> <em>Sep 17th 2017</em> Bug fixing.</li>
 		<li><b>1.0.0</b> <em>May 27th 2012</em> Initial release.</li>
 	</ul>
 </body>
