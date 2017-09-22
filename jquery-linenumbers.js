@@ -18,6 +18,8 @@
             $(this).before('<textarea data-name="linenumbers" style="width:'+new_textarea_width+'px;height:'+textarea_height+'px;float:left;margin-right:'+'-'+new_textarea_width+'px;white-space:pre;overflow:hidden;" disabled="disabled"></textarea>');
             // Edit the existing textarea's styles
             $(this).css({'width':new_textarea_width+'px','height':textarea_height+'px','float':'right'});
+            // Add a clearing div.
+            $(this).after('<div style="clear:both;"></div>');
             // Define a simple variable for the line-numbers box
             var lnbox = $(this).parent().find('textarea[disabled="disabled"]');
             // Bind some actions to all sorts of events that may change it's contents

@@ -1,7 +1,7 @@
 jQueryLineNumbersPlugin
 =======================
 
-This jQuery plugin will take any normal text area and give it line numbers. See the [example](https://drakonoved.github.io/line-numbers/) for more infromation
+This jQuery plugin will take any normal text area and give it line numbers. See the [example](http://pgooch.github.io/jQueryLinenNumbersPlugin/) for more infromation
 
 Usage
 -----
@@ -34,5 +34,6 @@ This plugin has been realsed under the GNU General Public License v3.0.
 
 Version History
 ---------------
++ 1.1.- • Sep 17th 2017 - _Updated example link, fixed a bug that would cause text after the box to appear over the line-numbers box, added minified JS map, remvoed version numbers from example page._
 + 1.0.2 • Sep 17th 2017 - _Bug fixing._
 + 1.0.0 • May 27th 2012 - _Initial release._
